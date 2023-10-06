@@ -89,6 +89,8 @@ namespace ColorGuesser
             pbInside.BackColor = Color.FromArgb(GuessR, GuessG, GuessB);
         }
         
+
+        //This method works for every slider 
         private void tbR_ValueChanged(object sender, EventArgs e)
         {
             if(GuessR == R && GuessG == G && GuessB == B)
