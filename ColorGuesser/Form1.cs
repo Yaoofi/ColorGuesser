@@ -14,6 +14,7 @@ namespace ColorGuesser
     {
         int GuessR, GuessG, GuessB;
         int R, G, B;
+        bool cheatShown = false;
 
         public Form1()
         {
@@ -28,6 +29,23 @@ namespace ColorGuesser
             tbR.Value = 0;
             tbG.Value = 0;
             tbB.Value = 0;
+            lblR.Text = "R: 0";
+            lblG.Text = "G: 0";
+            lblB.Text = "B: 0";
+            lblOdp.Visible = false;
+        }
+
+        private void btnSecretButton_DoubleClick(object sender, EventArgs e)
+        {
+            cheatShown = !cheatShown;
+            if (cheatShown == false)
+            {
+                lblOdp.Visible = false;
+            }
+            else
+            {
+                lblOdp.Visible = true;
+            }
         }
 
         public void LosujKolor()
@@ -75,8 +93,8 @@ namespace ColorGuesser
         {
             if(GuessR == R && GuessG == G && GuessB == B)
             {
-                MessageBox.Show("Wygrałeś! Kontynuować?", "GRATULACJE", MessageBoxButtons.YesNo);
-                if(DialogResult == DialogResult.Yes)
+                DialogResult odp = MessageBox.Show("Wygrałeś! Kontynuować?", "GRATULACJE", MessageBoxButtons.YesNo);
+                if(odp == DialogResult.Yes)
                 {
                     Reset();
                 }

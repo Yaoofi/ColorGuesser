@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.pbInside = new System.Windows.Forms.PictureBox();
             this.pbOutline = new System.Windows.Forms.PictureBox();
@@ -38,11 +39,13 @@
             this.lblG = new System.Windows.Forms.Label();
             this.lblB = new System.Windows.Forms.Label();
             this.lblOdp = new System.Windows.Forms.Label();
+            this.btnSecretButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbInside)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOutline)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSecretButton)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +76,7 @@
             // 
             // tbR
             // 
-            this.tbR.Location = new System.Drawing.Point(32, 200);
+            this.tbR.Location = new System.Drawing.Point(40, 200);
             this.tbR.Maximum = 255;
             this.tbR.Name = "tbR";
             this.tbR.Size = new System.Drawing.Size(216, 45);
@@ -85,7 +88,7 @@
             // 
             // tbG
             // 
-            this.tbG.Location = new System.Drawing.Point(32, 256);
+            this.tbG.Location = new System.Drawing.Point(40, 256);
             this.tbG.Maximum = 255;
             this.tbG.Name = "tbG";
             this.tbG.Size = new System.Drawing.Size(216, 45);
@@ -96,7 +99,7 @@
             // 
             // tbB
             // 
-            this.tbB.Location = new System.Drawing.Point(32, 312);
+            this.tbB.Location = new System.Drawing.Point(40, 312);
             this.tbB.Maximum = 255;
             this.tbB.Name = "tbB";
             this.tbB.Size = new System.Drawing.Size(216, 45);
@@ -141,6 +144,15 @@
             this.lblOdp.TabIndex = 16;
             this.lblOdp.Text = "RGB";
             // 
+            // btnSecretButton
+            // 
+            this.btnSecretButton.Location = new System.Drawing.Point(0, 384);
+            this.btnSecretButton.Name = "btnSecretButton";
+            this.btnSecretButton.Size = new System.Drawing.Size(16, 16);
+            this.btnSecretButton.TabIndex = 17;
+            this.btnSecretButton.TabStop = false;
+            this.btnSecretButton.DoubleClick += new System.EventHandler(this.btnSecretButton_DoubleClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,15 +168,18 @@
             this.Controls.Add(this.pbInside);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbOutline);
+            this.Controls.Add(this.btnSecretButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(300, 440);
             this.Name = "Form1";
-            this.Text = "ColorGuesser";
+            this.Text = "Color Guesser";
             ((System.ComponentModel.ISupportInitialize)(this.pbInside)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOutline)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSecretButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +197,7 @@
         private System.Windows.Forms.Label lblG;
         private System.Windows.Forms.Label lblB;
         private System.Windows.Forms.Label lblOdp;
+        private System.Windows.Forms.PictureBox btnSecretButton;
     }
 }
 
