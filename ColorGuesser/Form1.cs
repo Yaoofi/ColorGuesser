@@ -93,7 +93,7 @@ namespace ColorGuesser
         {
             if(GuessR == R && GuessG == G && GuessB == B)
             {
-                DialogResult odp = MessageBox.Show("Wygrałeś! Kontynuować?", "GRATULACJE", MessageBoxButtons.YesNo);
+                DialogResult odp = MessageBox.Show("Yow won! Continue?", "Congrats", MessageBoxButtons.YesNo);
                 if(odp == DialogResult.Yes)
                 {
                     Reset();
